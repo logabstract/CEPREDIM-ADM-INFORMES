@@ -96,7 +96,7 @@ if (isset($_GET['año'])) {
     	while($row = $result->fetch_array(MYSQLI_ASSOC)){
     		echo "<tr>";
     		
-    		echo '<td>' . $row["numero"] . '</td>' . '<td style="white-space: nowrap;">' . $row["fecha"] . '</td>' . '<td>' . utf8_encode($row["asunto"]) . '</td>' . '<td style="white-space: nowrap;">' . obtenerAutores($row["id"]) . '</td>' . '<td>' . utf8_encode($row["referencias"]) . '</td>' .  '<td>' . utf8_encode($row["observacion"]) . '</td>' . '<td>' . '<a href=download.php?id=' . $row['id'] . '>' . $row['filename'] . '</a>' . '</td>';
+    		echo '<td>' . $row["numero"] . '</td>' . '<td style="white-space: nowrap;">' . $row["fecha"] . '</td>' . '<td>' . utf8_encode($row["asunto"]) . '</td>' . '<td style="white-space: nowrap;">' . obtenerAutores($row["id"]) . '</td>' . '<td>' . utf8_encode($row["referencias"]) . '</td>' .  '<td>' . utf8_encode($row["observacion"]) . '</td>' . '<td style="white-space: nowrap;">' . '<a href=download.php?id=' . $row['id'] . '>' . $row['filename'] . '</a>' . '</td>';
     		
     		echo "</tr>";
     	}
